@@ -8,15 +8,17 @@ import { Observable } from 'rxjs';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-  posts$: Object;
+  // Add a property for holding the return data from API
+      posts$: Object;
 
-  constructor(private data: DataService) { }
+  // Passing in the data service 
+      constructor(private data: DataService) { }
 
+  // Getting and binding the data 
   ngOnInit() {
-
-    this.data.getPosts().subscribe(
+      this.data.getPosts().subscribe(
       data => this.posts$ = data
     );
-    console.log(this.data.getPosts());
+      console.log(this.data.getPosts()); 
    }
  }

@@ -5,10 +5,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
-// Create an Instance - dependency injection
+  // Create an Instance - dependency injection
   constructor(private http: HttpClient) { }
 
-  // Create custom method
+  // Create custom methods
   getUsers() {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
